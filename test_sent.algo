@@ -1,0 +1,34 @@
+ALGORITHM read_sentence // give algorithm name wich is read_sentence 
+VAR //declaration of variable that we used in our algorithme,that will be changed also over instruction
+  nbr_ch : INTEGER := 0;//initialaze nbr_ch that have 0 like value from the begining, it will have the length of sentence
+  ch : CHAR ;//declaration of variable ch that will read a carracter 
+  nbr_word :INTEGER := 0;//initialaze nbr_word that have 0 like value
+  nbr_vow : INTEGER := 0;//initialaze nbr_vow that have 0 like value
+BEGIN //beginig our algorithme
+  ch <> " ";// initialise the first carracter that shouldnt be espace
+ WHILE (ch <> ".") DO//if the caracter that we will readed not point (its the condition) so begin the instruction 
+   Read(ch);//read the carracter
+  nbr_ch := nbr_ch + 1;//the length of sentence will be 1 in the first iteration
+  IF (ch := "a" OR ch := "e" OR ch := "i" OR ch := "o" OR ch := "u" OR ch := "y" ) THEN 
+  //if the condition true so jump on instruction if its false go out from selector if
+
+            nbr_vow := nbr_vow + 1;// calculate the nember of vowels  the first loope if condition true nbrvow will take one
+
+  END_IF
+   IF (ch = " ") THEN//if condition true (if we have space) we jump on instruction, if condition false we go out from this selector if
+      nbr_word := nbr_word + 1;//nbr_word will be 1 on first loop 
+  END_IF
+
+  Read(nbr_ch);
+  Read(nbr_word);
+  Read(nbr_vow);
+//read all the variable
+ END_WHILE//end of iterative while
+   Write(nbr_ch);
+  Write(nbr_word);
+  Write(nbr_vow);
+  //write all variable
+END//end of algorithme
+
+
+
